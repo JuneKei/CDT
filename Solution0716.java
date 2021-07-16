@@ -30,7 +30,7 @@ public class Solution0715 {
 		int sum=0;
 		for(double d : answer) {
 			sum += (int)d; 
-		}
+		} 
         return sum;
     }
 }
