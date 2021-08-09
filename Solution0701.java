@@ -17,7 +17,7 @@ public class Solution0701 {
 			if( n%i==0 && m%i==0) {
 				answer[0]= i;
 			}
-		}
+		} 
 		result=answer[0];
 		answer[1]=(n*m)/result;
 		//최소 공배수는 둘의 곱을 나눈값
