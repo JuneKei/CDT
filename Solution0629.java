@@ -7,8 +7,8 @@ public class Solution0629 {
 	    int h3=(x/100)%10;
 	    int h2=(x/10)%10;
 	    int h1=(x/1)%10; 
-    	// %10À» ÇØ¾ßÁö °ªÀÇ 1ÀÇÀÚ¸®±îÁö µÊ
-	    // h4µµ %10 ÇØ¾ß °ªÀÌ 10000ÀÏ¶§ 0ÀÌ ³ª¿È
+    	// %10ì„ í•´ì•¼ì§€ ê°’ì˜ 1ì˜ìë¦¬ê¹Œì§€ ë¨
+	    // h4ë„ %10 í•´ì•¼ ê°’ì´ 10000ì¼ë•Œ 0ì´ ë‚˜ì˜´
 	    
 	    boolean answer = false;
 	    
@@ -19,3 +19,13 @@ public class Solution0629 {
         return answer;
     }
 }
+
+def solution(x):
+    b=str(x)
+    sum=0
+    flag=False
+    for i in b:  #ìŠ¤íŠ¸ë§ ê¸€ì í•˜ë‚˜ì”© ê°€ì ¸ì˜¤ê¸°
+        sum+=int(i)
+    if(x%sum==0):
+        flag=True
+    return flag
