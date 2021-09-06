@@ -25,4 +25,14 @@ public class Solution0701 {
     }
 }
 
+def solution(n, m):
+    m0=m1=m2=0
+    for i in range(1,max(n,m)):
+       if (n%i==0) & (m%i==0) :
+           m0=i
+           m1=n/i
+           m2=m/i
+    answer=[m0,int(m0*m1*m2)]
+
+    return answer
 
