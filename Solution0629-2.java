@@ -11,3 +11,6 @@ public class Solution {
         return avg;
     }
 }
+
+def solution(arr):
+    return sum(arr)/len(arr)
