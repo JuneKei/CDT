@@ -5,24 +5,33 @@ import java.util.Arrays;
 class Solution0703 {
     public long solution(long n) {
     	String x= String.valueOf(n);
-			//½ºÆ®¸µÀ¸·Î º¯È¯½ÃÅ°±â
+			//ìŠ¤íŠ¸ë§ìœ¼ë¡œ ë³€í™˜ì‹œí‚¤ê¸°
 		String[] arr = new String[x.length()];
-			//String ¹è¿­À» String±æÀÌ °ªÀ¸·Î ¸¸µé±â
+			//String ë°°ì—´ì„ Stringê¸¸ì´ ê°’ìœ¼ë¡œ ë§Œë“¤ê¸°
 		for(int i=0;i<arr.length;i++) {
 			arr[i]=Character.toString(x.charAt(i));		
 		}
-		// i ¿¡ ÇØ´çÇÏ´Â ±ÛÀÚ ÇÏ³ª¾¿ ³Ö±â
+		// i ì— í•´ë‹¹í•˜ëŠ” ê¸€ì í•˜ë‚˜ì”© ë„£ê¸°
 		
 		Arrays.sort(arr);
-		//arr ¹è¿­À» ¿À¸§Â÷ ¼øÀ¸·Î Á¤·Ä
+		//arr ë°°ì—´ì„ ì˜¤ë¦„ì°¨ ìˆœìœ¼ë¡œ ì •ë ¬
 		x="";
-		//x°ªÀ» ÃÊ±âÈ­ ½ÃÅ°°í
+		//xê°’ì„ ì´ˆê¸°í™” ì‹œí‚¤ê³ 
 		for(int i=arr.length-1;i>=0;i--) {
 			x += arr[i];	
 		}
-		//µÚ¿¡ ¼ıÀÚºÎÅÍ ³ÖÀ¸¸é¼­ ³»¸²Â÷¼ø
+		//ë’¤ì— ìˆ«ìë¶€í„° ë„£ìœ¼ë©´ì„œ ë‚´ë¦¼ì°¨ìˆœ
 		n=Long.parseLong(x);
-		//String À» LongÀ¸·Î º¯È¯
+		//String ì„ Longìœ¼ë¡œ ë³€í™˜
         return n;
     }
 }
+
+
+def solution(n):
+    a=[i for i in str(n)]
+    a.sort(reverse=True)
+    answer=''
+    for i in a:
+        answer+=i
+    return int(answer)
