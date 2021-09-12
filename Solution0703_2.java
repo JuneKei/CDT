@@ -3,22 +3,25 @@ package codingtest;
 public class Solution0703_2 {
 	    public int[] solution(long n) {
 			String x= String.valueOf(n);
-			//½ºÆ®¸µÀ¸·Î º¯È¯ [ String a = "" + n;]
+			//ìŠ¤íŠ¸ë§ìœ¼ë¡œ ë³€í™˜ [ String a = "" + n;]
 				String[] arr = new String[x.length()];
-				//¹è¿­¿¡ ´ã±â
+				//ë°°ì—´ì— ë‹´ê¸°
 				int[] arr2 = new int[x.length()];
-		        //ÀÎÆ®¹è¿­µµ °°ÀÌ»ı¼º
+		        //ì¸íŠ¸ë°°ì—´ë„ ê°™ì´ìƒì„±
 		for(int i=0;i<arr.length;i++) {
 		    arr[i]=Character.toString(x.charAt(i));
-		    	//i¿¡ ÇØ´çÇÏ´Â ±ÛÀÚ ÇÏ³ª¾¿ ³Ö±â
+		    	//iì— í•´ë‹¹í•˜ëŠ” ê¸€ì í•˜ë‚˜ì”© ë„£ê¸°
 		}
 		int j=0;
 		        for(int i=arr.length-1;i>=0;i--,j++) {
 	                
 					arr2[j]= Integer.parseInt(arr[i]);
-					//ÀÎÆ®·Î ÀüÈ¯ÇØ¼­ arr2¹è¿­¿¡ ³Ö±â
+					//ì¸íŠ¸ë¡œ ì „í™˜í•´ì„œ arr2ë°°ì—´ì— ë„£ê¸°
 				}
 		
 	        return arr2;
 	    }
 	}
+
+def solution(n):
+    return [int(i) for i in str(n)[::-1]]
