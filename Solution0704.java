@@ -6,12 +6,18 @@ public class Solution0704 {
     	int x=0;
     	
 		for(int i=0;i<(int)(Math.log10(n)+1);i++) {
-		//(int)(Math.log(n)+1) int nÀÇ ±æÀÌ
+		//(int)(Math.log(n)+1) int nì˜ ê¸¸ì´
 			
 			x+=(Integer.toString(n).charAt(i)-48);
-			//nÀ» toString[¹®ÀÚ] -> charAtÀ¸·Î[¹®ÀÚ »Ì±â]
-			// -48À» ¾ÈÇÏ¸é 5ÀÏ¶§ ¾Æ½ºÅ°ÄÚµå°ª 53À¸·Î ÀĞÀ½
+			//nì„ toString[ë¬¸ì] -> charAtìœ¼ë¡œ[ë¬¸ì ë½‘ê¸°]
+			// -48ì„ ì•ˆí•˜ë©´ 5ì¼ë•Œ ì•„ìŠ¤í‚¤ì½”ë“œê°’ 53ìœ¼ë¡œ ì½ìŒ
 		}
         return n;
     }
 }
+
+def solution(n):
+    answer = 0
+    for i in str(n):
+        answer+=int(i)
+    return answer
