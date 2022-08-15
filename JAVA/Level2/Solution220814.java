@@ -1,7 +1,3 @@
-public class Solution220814 {
-    
-}
-
 //하노이의 탑
 class Solution220814 {
     static int[][] answer;
